@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+        <link rel="stylesheet" href="style.css" />
+        <title>florin's world</title>
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="header">
+                <img
+                    draggable="false"
+                    src="./assets/gnome_triangles.svg"
+                    alt="gnome_triangles"
+                    class="can-invert"
+                />
+                <p>florin's world</p>
+            </div>
+
+            <div class="content">
+                <div class="content-section">
+                    <picture>
+                        <source
+                            srcset="/assets/about_section_icon_dark.svg"
+                            media="(prefers-color-scheme: dark)"
+                        />
+                        <img
+                            class="section-icon"
+                            draggable="false"
+                            src="/assets/about_section_icon_light.svg"
+                            alt="About Icon"
+                        />
+                    </picture>
+
+                    <h2 class="content-section-header">About Me</h2>
+                    <p class="content-section-info">
+                        Hi, I sometimes code, sometimes design, sometimes just
+                        spend all day watching movies or listening to music. I
+                        am running Fedora Workstation btw.
+                    </p>
+                    <h3 class="content-section-more-header">Follow me</h3>
+                    <div class="content-section-icon-links">
+                        <button
+                            onclick="window.open('https://github.com/florinsdistortedvision/')"
+                            can-hover="true"
+                            class="content-section-icon-links-option"
+                        >
+                            <img
+                                draggable="false"
+                                src="./assets/github_icon.svg"
+                                alt="Github"
+                                class="can-invert"
+                            />
+                            <p>Github</p>
+                        </button>
+
+                        <button
+                            onclick="window.open('https://codeberg.org/florinsdistortedvision')"
+                            can-hover="true"
+                            class="content-section-icon-links-option"
+                        >
+                            <img
+                                draggable="false"
+                                src="./assets/codeberg_icon.svg"
+                                alt="Codeberg"
+                                class="can-invert"
+                            />
+                            <p>Codeberg</p>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <picture>
+                        <source
+                            srcset="/assets/hora_section_icon_dark.svg"
+                            media="(prefers-color-scheme: dark)"
+                        />
+                        <img
+                            class="section-icon"
+                            draggable="false"
+                            src="/assets/hora_section_icon_light.svg"
+                            alt="Hora Icon"
+                        />
+                    </picture>
+
+                    <h2 class="content-section-header">Hora Player</h2>
+                    <p class="content-section-info">
+                        Hora Player is an offline music player that follows the
+                        GNOME Human Interface Guidelines, with support for
+                        offline synced lyrics and music stats.
+                    </p>
+                    <h3 class="content-section-more-header">Built with</h3>
+                    <div class="content-section-icon-links">
+                        <button class="content-section-icon-links-option">
+                            <img
+                                draggable="false"
+                                src="./assets/gtk_icon.svg"
+                                alt="GTK"
+                                class="can-invert"
+                            />
+                            <p>GTK 4</p>
+                        </button>
+
+                        <button class="content-section-icon-links-option">
+                            <img
+                                draggable="false"
+                                src="./assets/blueprint_icon.svg"
+                                alt="Blueprint"
+                                class="can-invert"
+                            />
+                            <p>Blueprint</p>
+                        </button>
+
+                        <button class="content-section-icon-links-option">
+                            <img
+                                draggable="false"
+                                src="./assets/adwaita_icon.svg"
+                                alt="Adwaita"
+                                class="can-invert"
+                            />
+                            <p>LibAdwaita</p>
+                        </button>
+
+                        <button class="content-section-icon-links-option">
+                            <img
+                                draggable="false"
+                                src="./assets/css_icon.svg"
+                                alt="CSS"
+                                class="can-invert"
+                            />
+                            <p>CSS</p>
+                        </button>
+
+                        <button class="content-section-icon-links-option">
+                            <img
+                                draggable="false"
+                                src="./assets/python_icon.svg"
+                                alt="Python"
+                                class="can-invert"
+                            />
+                            <p>Python</p>
+                        </button>
+
+                        <button class="content-section-icon-links-option">
+                            <img
+                                draggable="false"
+                                src="./assets/meson_icon.svg"
+                                alt="Meson"
+                                class="can-invert"
+                            />
+                            <p>Meson</p>
+                        </button>
+                    </div>
+                    <h2 class="content-section-header">Coming To Flathub</h2>
+                </div>
+
+                <img
+                    id="horaScreenshot"
+                    class="hora-screenshot"
+                    draggable="false"
+                    src="/assets/hora-light.png"
+                    alt="Hora Screenshot"
+                />
+            </div>
+
+            <div class="footer">
+                <p>Website inspired by GNOME's Developer site</p>
+                <p>© 2025 florinsdistortedvision / florin’s world</p>
+                <p>© GNOME - LibAdwaita Triangles</p>
+            </div>
+        </div>
+
+        <script>
+            function changeScreenshot() {
+                const img = document.getElementById("horaScreenshot");
+                if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                    img.src = "/assets/hora-dark.png";
+                } else {
+                    img.src = "/assets/hora-light.png";
+                }
+            }
+
+            changeScreenshot();
+
+            window
+                .matchMedia("(prefers-color-scheme: dark)")
+                .addEventListener("change", changeScreenshot);
+        </script>
+    </body>
+</html>
