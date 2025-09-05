@@ -23,13 +23,13 @@
                 <div class="content-section">
                     <picture>
                         <source
-                            srcset="/assets/about_section_icon_dark.svg"
+                            srcset="./assets/about_section_icon_dark.svg"
                             media="(prefers-color-scheme: dark)"
                         />
                         <img
                             class="section-icon"
                             draggable="false"
-                            src="/assets/about_section_icon_light.svg"
+                            src="./assets/about_section_icon_light.svg"
                             alt="About Icon"
                         />
                     </picture>
@@ -75,13 +75,13 @@
                 <div class="content-section">
                     <picture>
                         <source
-                            srcset="/assets/hora_section_icon_dark.svg"
+                            srcset="./assets/hora_section_icon_dark.svg"
                             media="(prefers-color-scheme: dark)"
                         />
                         <img
                             class="section-icon"
                             draggable="false"
-                            src="/assets/hora_section_icon_light.svg"
+                            src="./assets/hora_section_icon_light.svg"
                             alt="Hora Icon"
                         />
                     </picture>
@@ -161,7 +161,7 @@
                     id="horaScreenshot"
                     class="hora-screenshot"
                     draggable="false"
-                    src="/assets/hora-light.png"
+                    src="./assets/hora-light.png"
                     alt="Hora Screenshot"
                 />
             </div>
@@ -177,9 +177,9 @@
             function changeScreenshot() {
                 const img = document.getElementById("horaScreenshot");
                 if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-                    img.src = "/assets/hora-dark.png";
+                    img.src = "./assets/hora-dark.png";
                 } else {
-                    img.src = "/assets/hora-light.png";
+                    img.src = "./assets/hora-light.png";
                 }
             }
 
