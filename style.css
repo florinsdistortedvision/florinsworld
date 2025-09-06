@@ -199,6 +199,10 @@ body {
 }
 
 @media screen and (max-width: 450px) {
+    .content {
+        margin-top: -40px;
+    }
+
     .header p {
         font-size: 30px;
         transform: translate(-50%, 50%);
