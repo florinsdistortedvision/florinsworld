@@ -187,9 +187,24 @@ body {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
     .header p {
         font-size: 40px;
         transform: translate(-50%, 50%);
+    }
+
+    .header img {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .header p {
+        font-size: 30px;
+        transform: translate(-50%, 50%);
+    }
+
+    .header img {
+        width: 300px;
     }
 }
